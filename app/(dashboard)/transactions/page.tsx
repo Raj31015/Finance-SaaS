@@ -1,7 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
-import { UploadButton } from "./uploadButton"
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Loader2, Plus } from "lucide-react"
 import { columns } from "@/app/(dashboard)/transactions/columns"
@@ -12,18 +12,10 @@ import { useBulkDeleteTransactions } from "@/features/transactions/api/useBulkDe
 import { useNewTransaction } from "@/features/transactions/hooks/useNewTransaction"
 
 
-enum VARIANTS{
-    LIST="LIST",
-    IMPORT="IMPORT",
 
-}
-const INITIAL_IMPORT_RESULTS={
-    data:[],
-    errors:[],
-    meta:[],
-}
+
 const TransactionsPage=()=>{
-    const [variant,setVariant]=useState<VARIANTS>(VARIANTS.LIST)
+    
     const newTransaction=useNewTransaction();
     const deleteTransactions=useBulkDeleteTransactions();
     const transactionsQuery=useGetTransactions();
@@ -45,15 +37,7 @@ const TransactionsPage=()=>{
             </div>
         )
     }
-    if(variant===VARIANTS.IMPORT){
-        return(
-            <>
-            <div>
-                This is for import
-            </div>
-            </>
-        )
-    }
+   
     return (
         <div className="max-w-screen-2xl mx-auto w-full pb-10 -mt-24">
         <Card className="border-none drop-shadow-sm">
@@ -67,7 +51,7 @@ const TransactionsPage=()=>{
                 Add new
             </Button>
            
-            <UploadButton onUpload={()=>{}}/>
+            
             </div>
            
         </CardHeader>
