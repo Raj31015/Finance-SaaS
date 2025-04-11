@@ -38,5 +38,6 @@ export const useGetSummary=()=>{
          }
         }
     })
+    console.log(query);
     return query;
 }
