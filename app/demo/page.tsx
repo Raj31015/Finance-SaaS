@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
-export default function DemoPage(req: NextApiRequest, res: NextApiResponse) {
+export default function DemoPage() {
   const demoEmail = "demouser@example.com";
 
   const signInUrl = new URL("https://relaxing-fish-40.accounts.dev/sign-in");
