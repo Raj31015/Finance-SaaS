@@ -6,7 +6,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
  * No backend session creation is required or allowed.
  */
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export function handler(req: NextApiRequest, res: NextApiResponse) {
   const demoEmail = "demouser@example.com";
 
   const signInUrl = new URL("https://relaxing-fish-40.accounts.dev/sign-in");
