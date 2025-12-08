@@ -12,6 +12,9 @@ export default function Page() {
       <ClerkLoaded>
       <div className="flex items-center justify-center mt-8">
         <SignIn path="/sign-in"/>
+        <p>To demo the app use:</p>
+        <p>email:demouser@example.com</p>
+        <p>password:demouser</p>
         </div>
       </ClerkLoaded>
      <ClerkLoading>
