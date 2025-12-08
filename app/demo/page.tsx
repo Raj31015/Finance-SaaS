@@ -2,5 +2,5 @@
 import { redirect } from "next/navigation";
 
 export default function DemoPage() {
-  redirect("/");
+  redirect("/api/demo-login");
 }
