@@ -11,7 +11,7 @@ export async function GET(req: Request) {
     httpOnly: true,
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
-    path: "/",
+    path: "/dashboard",
     maxAge: 60 * 10, // 10 minutes
   });
 
