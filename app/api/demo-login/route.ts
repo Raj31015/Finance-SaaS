@@ -1,31 +1,22 @@
-// app/api/demo-login/route.ts
+import type { NextApiRequest, NextApiResponse } from "next";
 
-import { NextResponse } from "next/server";
-import { Clerk } from "@clerk/clerk-sdk-node";
+/**
+ * Redirects directly to Clerk sign-in with a prefilled demo email.
+ * This uses Clerk's `prefill_email` parameter, which Clerk officially supports.
+ * No backend session creation is required or allowed.
+ */
 
-const clerk = new Clerk({ secretKey: process.env.CLERK_SECRET_KEY! });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const demoEmail = "demouser@example.com";
 
-export async function GET(req: Request) {
-  const demoUserId = process.env.DEMO_USER_ID;
+  const signInUrl = new URL("https://relaxing-fish-40.accounts.dev/sign-in");
 
-  if (!demoUserId) {
-    return NextResponse.json({ error: "Missing demo user ID" }, { status: 500 });
-  }
+  // Clerk prefill
+  signInUrl.searchParams.set("prefill_email", demoEmail);
 
-  // Create Clerk session for demo user
-  const session = await clerk.sessions.createSession({
-    userId: demoUserId,
-  });
+  // Optional: after login redirect back to dashboard
+  signInUrl.searchParams.set("redirect_url", "/");
 
-  // Create a Set-Cookie header for __session
-  const res = NextResponse.redirect(new URL("/", req.url)); // your landing/dashboard route
-
-  res.cookies.set("__session", session.token, {
-    httpOnly: true,
-    path: "/",
-    sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
-  });
-
-  return res;
+  res.writeHead(302, { Location: signInUrl.toString() });
+  res.end();
 }
