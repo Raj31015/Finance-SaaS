@@ -1,31 +1,19 @@
-// pages/api/demo-login.ts
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 
-const DEMO_USER_ID = process.env.DEMO_USER_ID || "demo-user-1";
-const DEMO_COOKIE_NAME = "demo_user";
-const DEMO_TTL_SECONDS = 60 * 10; // 10 minutes
-const ENABLE_DEMO = process.env.ENABLE_DEMO === "true";
+export async function GET(req: Request) {
+  const DEMO_USER_ID = process.env.DEMO_USER_ID || "demo-user-1";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!ENABLE_DEMO) {
-    return res.status(403).json({ error: "Demo not enabled" });
-  }
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    return res.status(405).end();
-  }
+  const res = NextResponse.redirect(new URL("/dashboard", req.url));
 
-  const cookie = [
-    `${DEMO_COOKIE_NAME}=${encodeURIComponent(DEMO_USER_ID)}`,
-    `Max-Age=${DEMO_TTL_SECONDS}`,
-    `Path=/`,
-    `HttpOnly`,
-    `SameSite=Lax`,
-    process.env.NODE_ENV === "production" ? "Secure" : "",
-  ]
-    .filter(Boolean)
-    .join("; ");
+  res.cookies.set({
+    name: "demo_user",
+    value: DEMO_USER_ID,
+    httpOnly: true,
+    sameSite: "lax",
+    secure: process.env.NODE_ENV === "production",
+    path: "/",
+    maxAge: 60 * 10, // 10 minutes
+  });
 
-  res.setHeader("Set-Cookie", cookie);
-  return res.status(200).json({ ok: true, expiresIn: DEMO_TTL_SECONDS });
+  return res;
 }
