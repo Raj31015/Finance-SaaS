@@ -6,6 +6,10 @@ const isProtectedRoute = createRouteMatcher([
   
 ]);
 export default clerkMiddleware((auth,request)=>{
+  if (pathname === '/api/demo-login' || pathname === '/demo') {
+    return NextResponse.next();
+  }
+
   if(isProtectedRoute(request)){
     auth().protect();
   }
