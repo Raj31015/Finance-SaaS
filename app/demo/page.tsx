@@ -11,6 +11,5 @@ export default function DemoPage() {
   // Optional: after login redirect back to dashboard
   signInUrl.searchParams.set("redirect_url", "/");
 
-  res.writeHead(302, { Location: signInUrl.toString() });
-  res.end();
+    redirect(signInUrl.toString());
 }
