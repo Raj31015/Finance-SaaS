@@ -8,7 +8,7 @@ import { accepts } from "react-papaparse/dist/utils";
 config({path:".env.local"});
 const sql=neon(process.env.DATABASE_URL!)
 const db=drizzle(sql);
-const SEED_USER_ID="user_2hdqxj3plY2HtDja75EX9jNKqAx"
+const SEED_USER_ID="user_36YluBIvHepqxCiwG5wLnGszdTF"
 const SEED_CATEGORIES=[
     {id:"category_1",name:"Food",userId:SEED_USER_ID,plaidId:null},
     {id:"category_2",name:"Rent",userId:SEED_USER_ID,plaidId:null},
