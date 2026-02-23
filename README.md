@@ -11,7 +11,7 @@ Built with a scalable architecture using modern web technologies.
 ## 📸 Screenshots
 
 ### Demo Video
-![Dashboard](./dashboardc.mp4)
+![Dashboard](dashboardc.mp4)
 
 
 
