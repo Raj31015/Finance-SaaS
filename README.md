@@ -11,7 +11,7 @@ Built with a scalable architecture using modern web technologies.
 ## 📸 Screenshots
 
 ### Demo Video
-<video src="dashboardc.mp4" controls width="800"></video>
+<video src="https://raw.githubusercontent.com/Raj31015/Finance-SaaS/main/dashboardc.mp4" controls width="800"></video>
 
 
 
