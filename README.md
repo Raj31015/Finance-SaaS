@@ -14,7 +14,10 @@ Built with a scalable architecture using modern web technologies.
 
 
 
-https://github.com/user-attachments/assets/e9fb7fd5-beea-49e5-861c-d6685a852229
+
+https://github.com/user-attachments/assets/d700c801-157e-4410-90a5-2667325b8520
+
+
 
 
 
