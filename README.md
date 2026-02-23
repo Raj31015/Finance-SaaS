@@ -10,8 +10,11 @@ Built with a scalable architecture using modern web technologies.
 ---
 ## 📸 Screenshots
 
-### Demo Video
-<video src="https://raw.githubusercontent.com/Raj31015/Finance-SaaS/main/dashboardc.mp4" controls width="800"></video>
+
+
+
+
+https://github.com/user-attachments/assets/e9fb7fd5-beea-49e5-861c-d6685a852229
 
 
 
@@ -80,5 +83,5 @@ The backend is designed to be modular and easily scalable for future microservic
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/fintrack.git
-cd finora
+git clone https://github.com/Raj31015/Finance-SaaS.git
+cd Finance-SaaS
