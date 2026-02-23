@@ -4,8 +4,8 @@ A full-stack Finance Management SaaS platform that helps users track expenses, m
 
 Built with a scalable architecture using modern web technologies.
 
-🔗 Live Demo: https://your-live-link.com  
-📦 Backend API: https://your-api-link.com  
+🔗 Live Demo:https://finance-saas-rust.vercel.app/
+
 
 ---
 
