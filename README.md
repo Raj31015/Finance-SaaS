@@ -8,6 +8,14 @@ Built with a scalable architecture using modern web technologies.
 
 
 ---
+## 📸 Screenshots
+
+### Demo Video
+![Dashboard](./screenshots/dashboard.mp4)
+
+
+
+---
 
 ## 📌 Overview
 
@@ -38,14 +46,15 @@ The system is designed with a SaaS architecture mindset — supporting authentic
 - Zustand (State Management)
 - TailwindCSS
 - Chart Library (e.g., Recharts)
+- Next.js
 
 ### Backend
-- Express.js
-- MongoDB
+- Hono.js
+- Neon(PostgreSql)
 - JWT Authentication
+- Clerk
 
 ### DevOps & Tools
-- Docker
 - Vercel (Frontend Deployment)
 - Git & GitHub
 
@@ -56,23 +65,15 @@ The system is designed with a SaaS architecture mindset — supporting authentic
 The application follows a client-server architecture:
 
 - The React frontend communicates with REST APIs.
-- The Express backend handles authentication, business logic, and transaction aggregation.
-- MongoDB stores user and financial data securely.
+- The Hono backend handles authentication, business logic, and transaction aggregation.
+- Neon stores user and financial data securely.
 - Zustand manages global state efficiently on the frontend.
 
 The backend is designed to be modular and easily scalable for future microservices expansion.
 
 ---
 
-## 📸 Screenshots
 
-### Dashboard Overview
-![Dashboard](./screenshots/dashboard.png)
-
-### Analytics View
-![Analytics](./screenshots/analytics.png)
-
----
 
 ## ⚙️ Installation & Setup
 
@@ -80,4 +81,4 @@ The backend is designed to be modular and easily scalable for future microservic
 
 ```bash
 git clone https://github.com/yourusername/fintrack.git
-cd fintrack
+cd finora
