@@ -11,7 +11,7 @@ Built with a scalable architecture using modern web technologies.
 ## 📸 Screenshots
 
 ### Demo Video
-![Dashboard](dashboardc.mp4)
+[▶️ Watch Demo](https://github.com/Raj31015/Finance-SaaS/blob/main/dashboardc.mp4)
 
 
 
@@ -19,7 +19,7 @@ Built with a scalable architecture using modern web technologies.
 
 ## 📌 Overview
 
-FinTrack is a modern financial dashboard designed to simplify personal finance management.  
+Finora is a modern financial dashboard designed to simplify personal finance management.  
 Users can securely log transactions, categorize expenses, and gain actionable insights through interactive data visualization.
 
 The system is designed with a SaaS architecture mindset — supporting authentication, modular services, and scalable deployment.
