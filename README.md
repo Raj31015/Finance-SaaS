@@ -23,7 +23,7 @@ https://github.com/user-attachments/assets/d700c801-157e-4410-90a5-2667325b8520
 
 ---
 
-## 📌 Overview
+##  Overview
 
 Finora is a modern financial dashboard designed to simplify personal finance management.  
 Users can securely log transactions, categorize expenses, and gain actionable insights through interactive data visualization.
@@ -32,20 +32,20 @@ The system is designed with a SaaS architecture mindset — supporting authentic
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
-- 🔐 Secure User Authentication
-- 💳 Add, Edit & Delete Transactions
-- 📊 Real-Time Financial Analytics Dashboard
-- 📅 Monthly & Category-Based Expense Tracking
-- 📈 Interactive Charts & Visualizations
-- 🧾 Income vs Expense Summary
-- ☁️ Cloud Deployment Ready
-- 🔄 Persistent Database Storage
+-  Secure User Authentication
+-  Add, Edit & Delete Transactions
+-  Real-Time Financial Analytics Dashboard
+-  Monthly & Category-Based Expense Tracking
+-  Interactive Charts & Visualizations
+-  Income vs Expense Summary
+-  Cloud Deployment Ready
+-  Persistent Database Storage
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - React.js
@@ -66,7 +66,7 @@ The system is designed with a SaaS architecture mindset — supporting authentic
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 The application follows a client-server architecture:
 
